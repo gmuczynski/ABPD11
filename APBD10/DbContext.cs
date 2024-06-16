@@ -1,4 +1,5 @@
 ﻿using APBD10.Models;
+using APBD10.Models.AuthModels;
 using Microsoft.EntityFrameworkCore;
 using Moq;
 
@@ -21,6 +22,8 @@ public class DbContext: Microsoft.EntityFrameworkCore.DbContext
     public virtual DbSet<Medicament> Medicaments { get; set; }
     public virtual DbSet<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
     public virtual DbSet<Doctor> Doctors { get; set; }
+
+    public virtual DbSet<User> Users { get; set; }
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(

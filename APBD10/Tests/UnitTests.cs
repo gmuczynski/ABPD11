@@ -19,7 +19,7 @@ public class UnitTests
     public void TestInitialize()
     {
         _dbContextOptions = new DbContextOptionsBuilder<DbContext>()
-            //.UseInMemoryDatabase(databaseName: "TestDatabase") // Upewnij się, że dla każdego testu używasz nowej nazwy bazy danych
+            //.UseInMemoryDatabase(databaseName: "TestDatabase")
             .Options;
     }
     
